@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  web:
+    image: datsent/domain_app
+    container_name: Domain_app
+    build: .
+    ports:
+      - "80:5000"
