@@ -7,5 +7,8 @@ COPY requirements.txt ./
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip install -r requirements.txt
 EXPOSE 5000
-COPY . .
+COPY Application.py .
+COPY static static
+COPY templates templates
+COPY Data Data
 CMD ["flask", "run"]
